@@ -1,0 +1,77 @@
+aString1: Weil es mit Buchstaben anfängt
+aString2: 'In Anführungszeichen ist es besser!'
+aString3: >
+  Als eine einzige Zeile.
+  Auch wenn es hier mehrere Zeilen sind.
+  Das > steht für: in eine Zeile.
+aString4: |
+  Mehrere Zeilen.
+  Inklusive Zeilenumbrüche.
+  Das Pipe-Zeichen steht für: Zeilenweise Strings
+
+aNumber: 12345
+
+aNumberWithVariable: &var 55555
+aNumberUseVar: *var
+
+aBoolean1: false
+aBoolean2: true
+
+anArray1: [ 1, 2, 3 ]
+anArray2:
+  1
+  2
+  3
+anArray3: [ "Max", "Moritz", "Hans" ]
+anArray4:
+  - "Max"
+  - "Moritz"
+  - "Hans"
+
+anObject1: { firstName: "Max", lastName: "Mustermann" }
+anObject2:
+  firstName: "Max"
+  lastName: "Mustermann"
+
+anArrayOfObjects:
+  - firstName: "Max"
+    lastName: "Mustermann"
+  - firstName: "Moritz"
+    lastName: "Zwei"
+  - firstName: "Hans"
+    lastName: "Drei"
+
+
+aComplexObject:
+  - users:
+    - name: "Max Mustermann"
+      email: "mm@user.de"
+      id: 815
+      active: true
+    - name: "Moritz Zwei"
+      email: "hz@user.de"
+      id: 4711
+    - name: "Hans Drei"
+      email: "hd@user.de"
+      id: 1234
+  - ids:
+    - 815
+    - 4711
+    - 1234
+  - mainuser: "Max Mustermann"
+  - defaultid: 815
+  - checked: true
+
+
+anArray:
+- 1
+- 2
+- 3
+nested:
+  array:
+  - this
+  - is
+  - an
+  - array
+hello: world
+
