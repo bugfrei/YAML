@@ -43,14 +43,20 @@ JSON:
 Inklusive Zeilenumbrüche.
 Das Pipe-Zeichen steht für: Zeilenweise Strings“,`
 
-YAML:
+YAML: (Formatierung wird Beibehalten, inkl. dem Einrücken um 2 Zeiche in Zeile 2)
 
 ```bash
 aString4: |
   Mehrere Zeilen.
-  Inklusive Zeilenumbrüche.
+    Inklusive Zeilenumbrüche.
   Das Pipe-Zeichen steht für: Zeilenweise Strings
 ```
+
+# Escape Sequenzen
+
+Sind `\` + Zeichen z.B. `\n`
+
+Bei Verwendung von Escape-Sequzenzen MUSS der String in Anführungszeichen stehen!
 
 # Zahl
 
@@ -80,6 +86,18 @@ YAML:
 
 - `aBoolean1: false`
 - `aBoolean2: true`
+
+Ebenfalls ist `yes` / `no`  oder `on` / `off`  möglich.
+
+# Datum
+
+Im Format `JJJJ-MM-TT hh:mm:ss` z.B. `datum: 2023-04-27 01:44:00`
+
+# Hexadezimal / Okatl
+
+Okatal mit vorangestellter `0` : `octal: 014`
+
+Hexadezimal mit vorangestelltem `0x` : `hexvalue: 0xC`
 
 # Arrays
 
@@ -127,6 +145,14 @@ anArray:
   - "Hans"
 ```
 
+Mit Variable:
+
+```bash
+anArray: &arrayVar
+  - 1
+  - 2
+```
+
 # Objekt
 
 Auch hier kann die JSON Variante genutzt werden oder Angaben mehrere Properties in je einer eingerückten Zeile.
@@ -153,6 +179,14 @@ anObject1:
 anObject1:
   - firstName: "Max"
   - lastName: "Mustermann"
+```
+
+Mit Variable:
+
+```bash
+anObject: &objVar
+  firstName: "Max"
+  lastName: "Mustermann"
 ```
 
 # Ein Array von Objekten
@@ -262,5 +296,4 @@ aComplexObject:
   - defaultid: 815
   - checked: true
 ```
-
 
